@@ -1,0 +1,46 @@
+{
+  "file": "/home/i2phi/Documents/dev/aidev/design-guidelines-pipeline/data/01-audience/audience_results.md",
+  "concept": {
+    "id": "publico-objetivo",
+    "title": "Público objetivo",
+    "description": "",
+    "chunks": [
+      {
+        "id": "migrantes-en-paises-en-desarrollo",
+        "title": "Migrantes en países en desarrollo",
+        "text": "Personas que dejaron su país y están construyendo una nueva vida. Algunos ya trabajan y envían dinero a su familia; otros apenas están comenzando. Necesitan una forma simple, segura y sin trabas para enviar remesas, manejar su dinero y recuperar el control financiero.",
+        "file_refs": [
+          "4.png"
+        ],
+        "description": ""
+      },
+      {
+        "id": "jovenes-que-viven-conectados",
+        "title": "Jóvenes que viven conectados.",
+        "text": "Estudiantes, jóvenes profesionales y adultos que hacen todo desde el celular. Necesitan una cuenta para pagar suscripciones, dividir gastos, recibir apoyo de sus padres y manejar su dinero de forma ágil, sin depender de otros ni complicarse. Además, requieren un medio de pago seguro para sus compras en línea, evitando poner en riesgo sus tarjetas de crédito o débito.",
+        "file_refs": [
+          "5.png"
+        ],
+        "description": ""
+      },
+      {
+        "id": "viajeros-y-nomadas-digitales",
+        "title": "Viajeros y nómadas digitales",
+        "text": "Personas que viven sin fronteras y necesitan una cuenta igualmente flexible. Se mueven constantemente, trabajan de forma remota o viajan por el mundo. Buscan una solución global que funcione en todos lados, sin complicaciones ni costos ocultos.",
+        "file_refs": [
+          "6.png"
+        ],
+        "description": ""
+      },
+      {
+        "id": "criptofans",
+        "title": "CriptoFans",
+        "text": "Personas que ganan en cripto y quieren convertirlo en dinero útil al instante. Buscan una forma directa y segura de convertir sus ingresos en cripto a dólares y usarlos desde una tarjeta confiable, sin depender de terceros poco confiables.",
+        "file_refs": [
+          "7.png"
+        ],
+        "description": ""
+      }
+    ]
+  }
+}
