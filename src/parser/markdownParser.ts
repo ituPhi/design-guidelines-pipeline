@@ -1,25 +1,6 @@
 import * as fs from "fs";
 import path from "path";
-
-export interface Chunk {
-  id: string;
-  title: string;
-  text: string;
-  file_refs: string[];
-  description: string;
-}
-
-export interface Concept {
-  id: string;
-  title: string;
-  description: string;
-  chunks: Chunk[];
-}
-
-export interface ConceptFile {
-  file: string;
-  concept: Concept;
-}
+import type { Chunk, Concept, ConceptFile } from "../types.ts";
 
 /**
  * Ensures a directory exists, creating it if necessary
