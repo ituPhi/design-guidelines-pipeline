@@ -4,14 +4,19 @@
   "description": "pipeline for design system parsing",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "getBrand": "cp -r --update ~/Documents/brands/wally/* ~/Documents/dev/aidev/design-guidelines-pipeline/data"
   },
   "keywords": [
     "neo4j"
   ],
+  "type": "module",
   "author": "Juan Iturbe",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^24.5.2"
+  },
+  "dependencies": {
+    "neo4j-driver": "^5.28.2"
   }
 }

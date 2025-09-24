@@ -1,6 +1,5 @@
 import neo4j from "neo4j-driver";
 import type { Success, ConceptFile } from "../types.ts";
-import enfoque from "../../data/json/enfoque.json" with { type: "json" };
 
 const config = {
   url: process.env.NEO4J_URL as string,
@@ -22,7 +21,7 @@ async function importGraph(file: ConceptFile): Promise<Success> {
          SET c.title = $title, c.description=$description, c.source_file=$file
          FOREACH (chunk IN $chunks |
            MERGE (ch:Chunk {id: chunk.id})
-           SET ch.title = chunk.title, ch.text = chunk.text, ch.file_ref=chunk.file_ref, ch.description=chunk.description
+           SET ch.title = chunk.title, ch.text = chunk.text, ch.assets = chunk.file_refs, ch.description=chunk.description
            MERGE (c)-[:HAS]->(ch)
            MERGE (ch)-[:PART_OF]->(c)
          )
@@ -47,8 +46,13 @@ async function importGraph(file: ConceptFile): Promise<Success> {
   }
 }
 
-export async function runImport() {
-  const result = await importGraph(enfoque);
-  console.log(result);
-  return result;
+export async function importAllConcepts(
+  conceptFiles: ConceptFile[],
+): Promise<Success[]> {
+  const results: Success[] = [];
+  for (const file of conceptFiles) {
+    const result = await importGraph(file);
+    results.push(result);
+  }
+  return results;
 }
